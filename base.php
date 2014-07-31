@@ -9,6 +9,7 @@
 
   <?php
     do_action('get_header');
+    get_template_part('templates/ou-global-header');
     get_template_part('templates/header');
   ?>
 
