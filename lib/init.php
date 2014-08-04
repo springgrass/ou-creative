@@ -35,7 +35,7 @@ add_action('after_setup_theme', 'roots_setup');
 /**
  * Register sidebars
  */
-function roots_widgets_init() {
+/*function roots_widgets_init() {
   register_sidebar(array(
     'name'          => __('Primary', 'roots'),
     'id'            => 'sidebar-primary',
@@ -55,3 +55,4 @@ function roots_widgets_init() {
   ));
 }
 add_action('widgets_init', 'roots_widgets_init');
+*/
