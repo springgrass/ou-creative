@@ -57,5 +57,14 @@ function widgets_init() {
 		'before_title'  => $before_title,
 		'after_title'   => $after_title,
 	));
+	
+	register_sidebar( array(
+		'name'          => __( 'Footer 4', 'roots' ),
+		'id'            => 'sitebar-footer-4',
+		'before_widget' => '<section id="%1$s" class="' . $class . ' widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => $before_title,
+		'after_title'   => $after_title,
+	));
 }
 add_action( 'widgets_init', 'widgets_init' );
