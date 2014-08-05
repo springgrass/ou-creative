@@ -9,11 +9,17 @@
  *
  * @link https://github.com/roots/roots/pull/1042
  */
+ 
+
+
+
+
 $roots_includes = array(
   'lib/utils.php',           // Utility functions
   'lib/init.php',            // Initial theme setup and constants
   'lib/wrapper.php',         // Theme wrapper class
   'lib/sidebar.php',         // Sidebar class
+  'lib/widgets.php',          // Custom functions
   'lib/config.php',          // Configuration
   'lib/activation.php',      // Theme activation
   'lib/titles.php',          // Page titles
@@ -22,6 +28,8 @@ $roots_includes = array(
   'lib/comments.php',        // Custom comments modifications
   'lib/scripts.php',         // Scripts and stylesheets
   'lib/extras.php',          // Custom functions
+  'admin/admin-init.php',          // Custom functions
+
 );
 
 foreach ($roots_includes as $file) {
@@ -32,3 +40,12 @@ foreach ($roots_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+/* Redux 
+if ( !class_exists( 'ReduxFramework' ) && file_exists( dirname( __FILE__ ) . '/admin/ReduxFramework/ReduxCore/framework.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/admin/ReduxFramework/ReduxCore/framework.php' );
+}
+if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/admin/ReduxFramework/sample/sample-config.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/admin/ReduxFramework/sample/sample-config.php' );
+}*/
+	

@@ -14,10 +14,7 @@
   ?>
   <?php if (is_active_sidebar('sidebar-jumbotron')) :  ?>
   <div class="jumbotron">
-  	<div class="container">
-    	<h1>Hello World!</h1>
-        <p>Placeholder for my Jumbotron.</p>
-    </div>
+		<?php dynamic_sidebar('sidebar-jumbotron'); ?>
   </div> 
   <? endif; ?>
   <div class="wrap container" role="document">

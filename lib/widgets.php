@@ -25,8 +25,8 @@ function widgets_init() {
 		'id'            => 'sidebar-jumbotron',
 		'before_widget' => '<section id="%1$s" class="' . $class . ' widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => $before_title,
-		'after_title'   => $after_title,
+		'before_title'  => apply_filters( 'widgets_before_title', '<h1 class="widget-title">'),
+		'after_title'   => apply_filters( 'widgets_after_title', '</h1>' ),
 	));
 
 	// Footer 
