@@ -31,6 +31,14 @@
   </div><!-- /.wrap -->
 
   <?php get_template_part('templates/footer'); ?>
+<div class="options">
+<?php 
+// Due to a limitations of variables and functions, you must globally define
+// variables inside functions.
+global $ou_creative_redux_options;  // This is your opt_name.
+print_r ($ou_creative_redux_options);
 
+?>
+</div>
 </body>
 </html>

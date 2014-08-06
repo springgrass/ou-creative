@@ -41,11 +41,24 @@ foreach ($roots_includes as $file) {
 }
 unset($file, $filepath);
 
-/* Redux 
-if ( !class_exists( 'ReduxFramework' ) && file_exists( dirname( __FILE__ ) . '/admin/ReduxFramework/ReduxCore/framework.php' ) ) {
-    require_once( dirname( __FILE__ ) . '/admin/ReduxFramework/ReduxCore/framework.php' );
-}
-if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/admin/ReduxFramework/sample/sample-config.php' ) ) {
-    require_once( dirname( __FILE__ ) . '/admin/ReduxFramework/sample/sample-config.php' );
-}*/
+// Define the 'Portfolio' post type. This is used to represent galleries
+// of photos. This will be our top-level custom post type menu.
+$args = array(
+  'labels'	=>	array(
+            'all_items'           => 'Gallery',
+						'menu_name'	      		=>	'Portfolio',
+						'singular_name'       =>	'Gallery',
+					 	'edit_item'           =>	'Edit Gallery',
+					 	'new_item'            =>	'New Gallery',
+					 	'view_item'           =>	'View Gallery',
+					 	'items_archive'       =>	'Gallery Archive',
+					 	'search_items'        =>	'Search Portfolio',
+					 	'not_found'	      		=>	'No galleries found',
+					 	'not_found_in_trash'  =>	'No galleries found in trash'
+					),
+	'supports'			=>	array( 'title', 'editor', 'author', 'revisions' ),
+	'menu_position'	=>	5,
+	'public'				=>	true
+);
+register_post_type( 'portfolio', $args );
 	
